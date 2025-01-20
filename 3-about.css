@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+:root {
+    --main-color: #EDC1FF;
+    --dark-main: #DC8DFB;
+    --black: #13131a;
+    --bg: #FACDFB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: #EDC1FF;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+/*header design*/ 	
+header {
+	background: var(--bg);
+	display: flex;
+	align-items: center;
+/* justify-content: center;*/
+	padding: 0.5rem 2%;
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	z-index: 1000px;
+	flex-wrap: wrap;
+}
+
+
+.header.logo img {
+	height: 10px;
+	margin-left: 10px;
+}
+
+.header .navbar {
+	margin-right: 50%;
+}
+
+.header .navbar a{
+color: #000; 
+font-size: 20px;
+margin-left: 20px;
+margin-right: 20px;
+font-weight: bold;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+.header .navbar a:hover, a.active {
+color: floralwhite;
+transition: .3s;
+}
+
+.check-btn {
+	font-size: 30px;
+	color: black;
+	margin-left: 15px;
+	cursor: pointer;
+	display: none;
+}
+	
+.check-btn:hover{
+color: floralwhite;
+transition: .3s;
+}
+	
+#check {
+	display: none;
+}
+	
+/* RESPONSIVE MENU */
+
+@media (max-width: 1020px) {
+	.header .navbar {
+	margin-right: 25px;
+	}
+	
+.check-btn {
+display: block;
+}
+
+ul {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--dark-main);
+	top: 90px;
+	Left: -100%;
+	text-align: center;
+	transition: all .3s;
+	}
+	
+	nav ul li {
+		display: block;
+	}
+	
+	nav ul li a {
+		font-size: 45px;
+		color: floralwhite;
+		font-weight: bold;
+		Line-height: 120px;
+	}
+	
+	
+	
+	.header .navbar ul li a:hover, a.active {
+		background: none;
+		color: var(--bg);
+		border-bottom: 3rem solid var(--bg);
+		transition: .2s
+	}
+
+	#check: checked ~ ul {
+		Left: 0;
+	}
+	
+}
+/* RESPONSIVE MENU
+
+
+/*ICONS - CART-USER*/
+
+.header .icons div {
+	cursor: pointer;
+	padding-right: 12px;
+	color: var(--black);
+	font-size: 32px;
+	border: none;
+	display: inline-block;
+}
+
+
+.header .icons div:hover {
+	color:floralwhite;
+	transition: .3s;
+}
+
+/*ICONS CART-USER*/
+
+.header .search-form {
+	margin-left: 240px;
+}
+
+.header .search-form input {
+	height: 50px;
+	width: 340px;
+	font-size: 1.6rem;
+	color:var(--black);
+	text-transform: none;
+	background: whitesmoke;
+	border-radius: 50px;
+	border-color: var(--main-color)
+	margin-right: 17px;
+	padding: 10px
+}
+
+@media (max-width: 1020px) {
+	.header .search-form input {
+	height: 40px; 
+	width: 300px;
+	}
+}
+
+
+
+
+/*header end*/
+	.check-btn {
+		font-size: 30px;
+		color: black;
+		margin-left: 15px;
+		cursor: pointer;
+		display: none;
+	}
+		
+	.check-btn:hover{
+	color: floralwhite;
+	transition: .3s;
+	}
+		
+	#check {
+		display: none;
+	}
+		
+	/* RESPONSIVE MENU */
+	
+	@media (max-width: 1020px) {
+		.header .navbar {
+		margin-right: 25px;
+		}
+		
+	.check-btn {
+	display: block;
+	}
+ 
+	ul {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background-color: var(--dark-main);
+		top: 90px;
+		Left: -100%;
+		text-align: center;
+		transition: all .3s;
+		}
+		
+		nav ul li {
+			display: block;
+		}
+		
+		nav ul li a {
+			font-size: 45px;
+			color: floralwhite;
+			font-weight: bold;
+			Line-height: 120px;
+		}
+		
+		
+		
+		.header .navbar ul li a:hover, a.active {
+			background: none;
+			color: var(--bg);
+			border-bottom: 3rem solid var(--bg);
+			transition: .2s
+		}
+
+		#check: checked ~ ul {
+			Left: 0;
+		}
+		
+	}
+	/* RESPONSIVE MENU
+	
+ 
+	/*ICONS - CART-USER*/
+	
+	.header .icons div {
+		cursor: pointer;
+		padding-right: 12px;
+		color: var(--black);
+		font-size: 32px;
+		border: none;
+		display: inline-block;
+	}
+	
+	
+	.header .icons div:hover {
+		color:floralwhite;
+		transition: .3s;
+	}
+ 
+	/*ICONS CART-USER*/
+	
+	.header .search-form {
+		margin-left: 240px;
+	}
+	
+	.header .search-form input {
+		height: 50px;
+		width: 340px;
+		font-size: 1.6rem;
+		color:var(--black);
+		text-transform: none;
+		background: whitesmoke;
+		border-radius: 50px;
+		border-color: var(--main-color)
+		margin-right: 17px;
+		padding: 10px;
+	}
+ 
+	@media (max-width: 1020px) {
+		.header .search-form input {
+		height: 40px; 
+		width: 300px;
+		}
+	}
+	
+
+
+
+	/*header end*/
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ensures text is centered */
+    height: 100vh; /* Make the section take the full height of the viewport */
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.about-us h1 {
+    font-size: 2.5rem;
+    color: #DC8DFB;
+    margin-bottom: 15px;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+    max-width: 800px; /* Optional: limits the width of text for better readability */
+}
+
+/* Team Section */
+.team {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f3f3f3;
+}
+
+.team h1 {
+    font-size: 2.5rem;
+    color: #DC8DFB;
+    margin-bottom: 30px;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-info {
+    margin-top: 15px;
+}
+
+.card-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #13131a;
+}
+
+.card-role {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.class-email {
+    font-size: 1rem;
+    color: #444;
+    margin: 10px 0;
+}
+
+/* Button Styling */
+.button {
+    padding: 10px 20px;
+    background-color: #DC8DFB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.button:hover {
+    background-color: #EDC1FF;
+}
+
+/* Footer Style */
+.footer {
+    background: #DC8DFB;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    flex-wrap: wrap;
+    text-align: center; /* Ensures content is centered in default */
+}
+
+.footer-box-1, .footer-box-2, .footer-box-3 {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+}
+
+.footer-box-1 {
+    text-align: left; /* Left align the Location section */
+}
+
+.footer-box-2 {
+    text-align: center; /* Center the Promos section */
+    flex: 2; /* Increase width for the Promos section */
+}
+
+.footer-box-3 {
+    text-align: right; /* Right align the Contact Us section */
+}
+
+.footer-box h3 {
+    font-size: 1.5rem;
+}
+
+.footer form input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    margin-right: 10px;
+}
+
+.footer form button {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.footer form button:hover {
+    background-color: #dc8dfb;
+    color: white;
+}
+
+.icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.icons a:hover {
+    color: #dc8dfb;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-box {
+        margin-bottom: 20px;
+    }
+
+    .footer-box-2 {
+        text-align: center;
+    }
+
+    .footer-box-3 {
+        text-align: center;
+    }
+}
